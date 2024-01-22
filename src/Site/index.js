@@ -2,16 +2,36 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import "./index.css"
-import { Link } from "react-router-dom"
 
 function Site() {
     const [events, setEvents] = useState([]);
-    
-    const getRecentEvents = async () => {
+    const [featured, setFeatured] = useState(["hi"]);
+    const [active, setActive] = useState({
+        "MA": true,
+        "VT": true,
+        "CT": true,
+        "RI": true,
+        "NH": true,
+        "ME": true
+    })
+
+    const getUpcomingEvents = async () => {
         const response = await axios.get("http://localhost:4000/getUpcoming")
         const data = response.data
         setEvents(data)
         console.log(data)
+    }
+
+    const getFeaturedEvents = async () => {
+        const response = await axios.get("http://localhost:4000/getFeaturedIds")
+        const data = response.data
+        setFeatured(data)
+    }
+
+    const updateFilter = (e) => {
+        console.log(e)
+        console.log(document.getElementById(e.target.id))
+
     }
 
     const convertDay = (num) => {
@@ -37,36 +57,47 @@ function Site() {
     }
 
 
+    useEffect(() => {
+        getUpcomingEvents()
+    }, [])
+
+
     return (
-        <div>
-            <h1>Homepage</h1>
+        <div className="content">
 
-            <div className="user-content">
-                <h1>USER SPECIFIC CONTENT HERE EVENTUALLY</h1>
-            </div>
-
-            <div className="anon-content">
-                <button className="btn btn-danger" onClick={getRecentEvents}>GET EVENTS</button>
-                <h1>Upcoming Events</h1>
+            <div className="d-flex justify-content-center">
                 <div className="list-group eventListContainer">
-                    {events.map((e, i) => {
-                        return (
-                            <div className="list-group-item eventListItem d-flex flex-row" key={e.id}>
-                                <img className="eventListItemPic"
-                                    src={e.images.find((i) => i.type === "profile").url}></img>
-                                <div className="tournament-info-container">
-                                    <div>{getDateFromUnix(e.startAt)}</div>
-                                    <div>{e.city}, MA</div>
-                                    <div>ID: {e.id}</div>
+                    <h1 className="title" >Massachusetts Smash Ultimate</h1>
+                    <div className="featuredEventsContainer">
+                        <h3>Featured Events</h3>
+                        <ul>
+                            <li>1/20 - Target Test 6</li>
+                            <li><a className="featured-link" href="1/27 - Push The Limit 20">1/27 - Push The Limit 20</a></li>
+                            <li>2/10 - Mash Harder 8</li>
+                            <li>2/17 - UMA Fox Fury</li>
+                        </ul>
+                    </div>
+
+                    <div className="upcomingEventsContainer">
+                        <h3>Upcoming Events</h3>
+                        {events.map((e, i) => {
+                            return (
+                                <div className="list-group-item eventListItem d-flex flex-row" key={e.id}>
+                                    <img className="eventListItemPic"
+                                        src={e.images.find((i) => i.type === "profile").url}></img>
+                                    <div className="tournament-info-container">
+                                        <a href={`https://start.gg/${e.slug}`} className="tournament-title">{e.name}</a>
+                                        <div>{getDateFromUnix(e.startAt)}</div>
+                                        <div>{e.venueAddress}</div>
+                                    </div>
                                 </div>
+                            )
+                        })}
+                    </div>
 
-
-                            </div>
-                        )
-                    })}
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
