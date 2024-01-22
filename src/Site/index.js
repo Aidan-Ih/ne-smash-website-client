@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import "./index.css"
 
 function Site() {
+    const backend_url = "http://3.144.118.252:4000"
     const [events, setEvents] = useState([]);
     const [featured, setFeatured] = useState(["hi"]);
     const [active, setActive] = useState({
@@ -16,16 +17,10 @@ function Site() {
     })
 
     const getUpcomingEvents = async () => {
-        const response = await axios.get("http://localhost:4000/getUpcoming")
+        const response = await axios.get(backend_url + "/getUpcoming")
         const data = response.data
         setEvents(data)
         console.log(data)
-    }
-
-    const getFeaturedEvents = async () => {
-        const response = await axios.get("http://localhost:4000/getFeaturedIds")
-        const data = response.data
-        setFeatured(data)
     }
 
     const updateFilter = (e) => {
