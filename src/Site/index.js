@@ -19,16 +19,9 @@ function Site() {
     const getUpcomingEvents = async () => {
         const response = await axios.get(backend_url + "/getUpcoming")
         const data = response.data
-        console.log(data)
         setEvents(data)
-        console.log(data)
     }
 
-    const updateFilter = (e) => {
-        console.log(e)
-        console.log(document.getElementById(e.target.id))
-
-    }
 
     const convertDay = (num) => {
         switch (num) {
