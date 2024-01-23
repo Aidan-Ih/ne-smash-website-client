@@ -19,6 +19,7 @@ function Site() {
     const getUpcomingEvents = async () => {
         const response = await axios.get(backend_url + "/getUpcoming")
         const data = response.data
+        console.log(data)
         setEvents(data)
         console.log(data)
     }
@@ -53,6 +54,7 @@ function Site() {
 
     useEffect(() => {
         getUpcomingEvents()
+        console.log(events)
     }, [])
 
     return (
@@ -64,10 +66,18 @@ function Site() {
                     <div className="featuredEventsContainer">
                         <h3>Featured Events</h3>
                         <ul>
-                            <li>1/20 - Target Test 6</li>
-                            <li><a className="featured-link" href="1/27 - Push The Limit 20">1/27 - Push The Limit 20</a></li>
-                            <li>2/10 - Mash Harder 8</li>
-                            <li>2/17 - UMA Fox Fury</li>
+                            <li><a className="featured-link"
+                                href="https://start.gg/ptl"
+                                target="_blank"
+                                rel="noopener noreferrer">1/27 - Push The Limit 20</a></li>
+                            <li><a className="featured-link"
+                                href="https://www.start.gg/tournament/mash-harder-8/details"
+                                target="_blank"
+                                rel="noopener noreferrer">2/10 - Mash Harder 8</a></li>
+                            <li><a className="featured-link"
+                                href="https://start.gg/suma"
+                                target="_blank"
+                                rel="noopener noreferrer">2/17 - UMA Fox Fury</a></li>
                         </ul>
                     </div>
 
