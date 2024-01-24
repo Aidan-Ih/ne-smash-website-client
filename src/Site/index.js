@@ -61,17 +61,21 @@ function Site() {
                         <h3>Featured Events</h3>
                         <ul>
                             <li><a className="featured-link"
+                                href="https://www.start.gg/tournament/asg-fight-night-115/details"
+                                target="_blank"
+                                rel="noopener noreferrer">1/24 - ASG 115 (MROS Qualifier)</a></li>
+                            <li><a className="featured-link"
                                 href="https://start.gg/ptl"
                                 target="_blank"
-                                rel="noopener noreferrer">1/27 - Push The Limit 20</a></li>
+                                rel="noopener noreferrer">1/27 - Push The Limit 20 (MROS Qualifier)</a></li>
                             <li><a className="featured-link"
                                 href="https://www.start.gg/tournament/mash-harder-8/details"
                                 target="_blank"
-                                rel="noopener noreferrer">2/10 - Mash Harder 8</a></li>
+                                rel="noopener noreferrer">2/10 - Mash Harder 8 (MROS Qualifier)</a></li>
                             <li><a className="featured-link"
                                 href="https://start.gg/suma"
                                 target="_blank"
-                                rel="noopener noreferrer">2/17 - UMA Fox Fury</a></li>
+                                rel="noopener noreferrer">2/17 - UMA Fox Fury (MROS Qualifier)</a></li>
                         </ul>
                     </div>
 
@@ -84,7 +88,7 @@ function Site() {
                                         src={e.images.find((i) => i.type === "profile").url}></img>
                                     <div className="tournament-info-container">
                                         <a href={`https://start.gg/${e.slug}`} className="tournament-title" target="_blank"
-                                rel="noopener noreferrer">{e.name}</a>
+                                            rel="noopener noreferrer">{e.name}</a>
                                         <div>{getDateFromUnix(e.startAt)}</div>
                                         <div>{e.venueAddress}</div>
                                     </div>
