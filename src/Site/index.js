@@ -56,6 +56,7 @@ function Site() {
             <div className="d-flex justify-content-center">
                 <div className="list-group eventListContainer">
                     <h1 className="title" >Massachusetts Smash Ultimate</h1>
+                    <h2 className="title"> (Beta Site) </h2>
                     <div className="featuredEventsContainer">
                         <h3>Featured Events</h3>
                         <ul>
