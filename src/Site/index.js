@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import "./index.css"
 
 function Site() {
-    const backend_url = "https://3.144.118.252:8080"
+    const backend_url = "https://ne-smash-website-server.onrender.com"
     const [events, setEvents] = useState([]);
     const [featured, setFeatured] = useState(["hi"]);
     const [active, setActive] = useState({
