@@ -83,7 +83,8 @@ function Site() {
                                     <img className="eventListItemPic"
                                         src={e.images.find((i) => i.type === "profile").url}></img>
                                     <div className="tournament-info-container">
-                                        <a href={`https://start.gg/${e.slug}`} className="tournament-title">{e.name}</a>
+                                        <a href={`https://start.gg/${e.slug}`} className="tournament-title" target="_blank"
+                                rel="noopener noreferrer">{e.name}</a>
                                         <div>{getDateFromUnix(e.startAt)}</div>
                                         <div>{e.venueAddress}</div>
                                     </div>
