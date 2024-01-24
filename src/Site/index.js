@@ -77,10 +77,11 @@ function Site() {
                                 target="_blank"
                                 rel="noopener noreferrer">2/17 - UMA Fox Fury (MROS Qualifier)</a></li>
                             <li><a className="featured-link"
-                                href="https://start.gg/suma"
+                                href="https://start.gg/tournament/mass-runs-on-smash-invitational"
                                 target="_blank"
                                 rel="noopener noreferrer">3/2 - Mass Runs On Smash (Invitational)</a></li>
                         </ul>
+                        If you would like your event featured, contact @fluffiluff_ssb on twitter or @fluffiluff on discord
                     </div>
 
                     <div className="upcomingEventsContainer">
