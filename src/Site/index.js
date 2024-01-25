@@ -61,10 +61,6 @@ function Site() {
                         <h3>Featured Events</h3>
                         <ul>
                             <li><a className="featured-link"
-                                href="https://www.start.gg/tournament/asg-fight-night-115/details"
-                                target="_blank"
-                                rel="noopener noreferrer">1/24 - ASG 115 (MROS Qualifier)</a></li>
-                            <li><a className="featured-link"
                                 href="https://start.gg/ptl"
                                 target="_blank"
                                 rel="noopener noreferrer">1/27 - Push The Limit 20 (MROS Qualifier)</a></li>
