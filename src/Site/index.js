@@ -61,9 +61,9 @@ function Site() {
                         <h3>Featured Events</h3>
                         <ul>
                             <li><a className="featured-link"
-                                href="https://start.gg/ptl"
+                                href="https://www.start.gg/tournament/mecha-gaming-league-boston/details"
                                 target="_blank"
-                                rel="noopener noreferrer">1/27 - Push The Limit 20 (MROS Qualifier)</a></li>
+                                rel="noopener noreferrer">2/3 - Mecha Noodle Bar Boston ($1000 Pot Bonus)</a></li>
                             <li><a className="featured-link"
                                 href="https://www.start.gg/tournament/mash-harder-8/details"
                                 target="_blank"
@@ -76,8 +76,13 @@ function Site() {
                                 href="https://start.gg/tournament/mass-runs-on-smash-invitational"
                                 target="_blank"
                                 rel="noopener noreferrer">3/2 - Mass Runs On Smash (Invitational)</a></li>
+                            <li><a className="featured-link"
+                                href="https://start.gg/beach"
+                                target="_blank"
+                                rel="noopener noreferrer">8/10 - Boston Blue Beat: Beach Episode</a></li>
                         </ul>
-                        If you would like your event featured, contact @fluffiluff_ssb on twitter or @fluffiluff on discord
+                        If you would like your event featured, contact @fluffiluff_ssb on twitter or @fluffiluff on discord.
+                        Featured tournaments are monthly/regional scale events.
                     </div>
 
                     <div className="upcomingEventsContainer">
