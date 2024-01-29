@@ -77,9 +77,14 @@ function Site() {
                                 target="_blank"
                                 rel="noopener noreferrer">3/2 - Mass Runs On Smash (Invitational)</a></li>
                             <li><a className="featured-link"
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer">4/27 - Umass Games</a></li>
+                            <li><a className="featured-link"
                                 href="https://start.gg/beach"
                                 target="_blank"
                                 rel="noopener noreferrer">8/10 - Boston Blue Beat: Beach Episode</a></li>
+
                         </ul>
                         If you would like your event featured, contact @fluffiluff_ssb on twitter or @fluffiluff on discord.
                         Featured tournaments are monthly/regional scale events.
