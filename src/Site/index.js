@@ -56,9 +56,8 @@ function Site() {
             <div className="d-flex justify-content-center">
                 <div className="list-group eventListContainer">
                     <h1 className="title" >Massachusetts Smash Ultimate</h1>
-                    <h2 className="title"> (Beta Site) </h2>
                     <div className="featuredEventsContainer">
-                        <h3>Featured Events</h3>
+                        <h3>Featured Upcoming Events</h3>
                         <ul>
                             <li><a className="featured-link"
                                 href="https://www.start.gg/tournament/mecha-gaming-league-boston/details"
@@ -91,7 +90,7 @@ function Site() {
                     </div>
 
                     <div className="upcomingEventsContainer">
-                        <h3>Upcoming Events</h3>
+                        <h3>All Upcoming Events</h3>
                         {events.map((e, i) => {
                             return (
                                 <div className="list-group-item eventListItem d-flex flex-row" key={e.id}>
