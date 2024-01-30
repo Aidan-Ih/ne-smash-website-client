@@ -50,6 +50,16 @@ function Site() {
         console.log(events)
     }, [])
 
+    const getTournamentImage = (e) => {
+        const filtered = e.images.filter((i) => i.type === "profile")
+        if (filtered.length === 1) {
+            return filtered[0].url
+        }
+        else {
+            return ""
+        }
+    }
+
     return (
         <div className="content">
 
@@ -92,10 +102,11 @@ function Site() {
                     <div className="upcomingEventsContainer">
                         <h3>All Upcoming Events</h3>
                         {events.map((e, i) => {
+                            console.log(e)
                             return (
                                 <div className="list-group-item eventListItem d-flex flex-row" key={e.id}>
                                     <img className="eventListItemPic"
-                                        src={e.images.find((i) => i.type === "profile").url}></img>
+                                        src={getTournamentImage(e)}></img>
                                     <div className="tournament-info-container">
                                         <a href={`https://start.gg/${e.slug}`} className="tournament-title" target="_blank"
                                             rel="noopener noreferrer">{e.name}</a>
