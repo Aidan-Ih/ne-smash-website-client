@@ -70,10 +70,6 @@ function Site() {
                         <h3>Featured Upcoming Events</h3>
                         <ul>
                             <li><a className="featured-link"
-                                href="https://www.start.gg/tournament/mecha-gaming-league-boston/details"
-                                target="_blank"
-                                rel="noopener noreferrer">2/3 - Mecha Noodle Bar Boston ($1000 Pot Bonus)</a></li>
-                            <li><a className="featured-link"
                                 href="https://www.start.gg/tournament/mash-harder-8/details"
                                 target="_blank"
                                 rel="noopener noreferrer">2/10 - Mash Harder 8 (MROS Qualifier)</a></li>
