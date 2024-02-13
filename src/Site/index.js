@@ -70,10 +70,6 @@ function Site() {
                         <h3>Featured Upcoming Events</h3>
                         <ul>
                             <li><a className="featured-link"
-                                href="https://www.start.gg/tournament/mash-harder-8/details"
-                                target="_blank"
-                                rel="noopener noreferrer">2/10 - Mash Harder 8 (MROS Qualifier)</a></li>
-                            <li><a className="featured-link"
                                 href="https://start.gg/suma"
                                 target="_blank"
                                 rel="noopener noreferrer">2/17 - UMA Fox Fury (MROS Qualifier)</a></li>
@@ -81,6 +77,10 @@ function Site() {
                                 href="https://start.gg/tournament/mass-runs-on-smash-invitational"
                                 target="_blank"
                                 rel="noopener noreferrer">3/2 - Mass Runs On Smash (Invitational)</a></li>
+                            <li><a className="featured-link"
+                                href="https://www.start.gg/tournament/new-england-ultimate-arcadian-2024/details"
+                                target="_blank"
+                                rel="noopener noreferrer">3/9 - New England Arcadian</a></li>
                             <li><a className="featured-link"
                                 href="#"
                                 target="_blank"
