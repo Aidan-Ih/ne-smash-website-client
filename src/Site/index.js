@@ -70,10 +70,6 @@ function Site() {
                         <h3>Featured Upcoming Events</h3>
                         <ul>
                             <li><a className="featured-link"
-                                href="https://start.gg/suma"
-                                target="_blank"
-                                rel="noopener noreferrer">2/17 - UMA Fox Fury (MROS Qualifier)</a></li>
-                            <li><a className="featured-link"
                                 href="https://start.gg/tournament/mass-runs-on-smash-invitational"
                                 target="_blank"
                                 rel="noopener noreferrer">3/2 - Mass Runs On Smash (Invitational)</a></li>
