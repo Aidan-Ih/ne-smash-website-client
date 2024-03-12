@@ -16,8 +16,7 @@ function Site() {
         RI: boolean
     }
 
-    //const backend_url = "https://ne-smash-website-server.onrender.com"
-    const backend_url = "http://localhost:4000"
+    const backend_url = "https://ne-smash-website-server.onrender.com"
     const [events, setEvents] = useState<Tournament[]>([]);
     const [statestate, setStateState] = useState<StateStateInterface>({ "MA": true, "CT": false, "NH": false, "VT": false, "ME": false, "RI": false })
 
