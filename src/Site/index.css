@@ -1,6 +1,6 @@
 .eventListContainer {
     background-color: rgb(255, 255, 255);
-    border-color: rgb(150, 150, 150);
+    border-color: rgb(240, 240, 240);
     border-left-style: solid;
     border-left-width: 1px;
     border-right-style: solid;
@@ -11,47 +11,67 @@
 
 .title{
     text-align: center;
-    margin: 10px;
+    margin-top: 30px;
 }
 
 .featured-link {
     text-decoration: none;
-    color: black
+    color: black;
+    
+}
+
+.featured-link-container {
+    margin-top: 22px;
+    margin-left: 10px;
 }
 
 .featuredEventsContainer {
     padding: 15px;
     margin: 15px;
-    background-color: rgb(255, 245, 158);
     max-width: 800px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: gray;
+    text-align: center;
 }
 
 .upcomingEventsContainer {
     padding: 15px;
     margin: 15px;
     max-width: 800px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: gray;
-    min-height: 100vh;
+    text-align: center;
 }
 
 .content {
-    background-color: gray;
+    background-color: white;
 }
+
+.bottom-content {
+    background-color: black;
+    color: white;
+    min-height: 100px;
+    padding: 25px;
+    text-align: center;
+}
+
 
 .eventListItem {
     margin: 10px;
-    background-color: white;
+    background-color: rgb(242, 253, 253);
     font-size: 18px;
 }
 
 .eventListItemPic {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
+}
+
+.featuredEventListItem {
+    margin: 5px;
+    font-size: 20px;
+    background-color: rgb(249, 255, 191);
+}
+
+.featuredEventPfp {
+    width: 75px;
+    height: 75px;
 }
 
 .tournament-info-container {
@@ -60,11 +80,17 @@
 }
 
 .tournament-title {
-    font-size: 22px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.tournament-info-text {
+    font-size: 15px;
 }
 
 .spacing {
-    background-color: lightgray;
+    background-color: white;
     border-style: solid;
     border-right: 1;
     border-top: 0;
@@ -77,7 +103,14 @@
     margin:20px;
 }
 
-.content {
-    background-color: rgb(248, 248, 248);
-    height: 100%;
+.checkbox-row {
+    margin: 10px;
+}
+
+.state-checkbox {
+    margin: 5px;
+}
+
+.state-ckbox-label {
+    margin: 5px;
 }
