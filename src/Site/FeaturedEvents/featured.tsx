@@ -19,6 +19,10 @@ var featured : featuredEvent[] = [
     {
         "name": "Boston Blue Beat: Beach Episode",
         "id": 612088
+    },
+    {
+        "name": "Granite State Grind",
+        "id": 644640
     }
 ]
 
