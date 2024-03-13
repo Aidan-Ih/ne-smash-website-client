@@ -23,6 +23,10 @@ var featured : featuredEvent[] = [
     {
         "name": "Granite State Grind",
         "id": 644640
+    },
+    {
+        "name": "The Bakery",
+        "id": 643945
     }
 ]
 
