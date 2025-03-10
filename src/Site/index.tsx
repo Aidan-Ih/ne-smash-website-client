@@ -16,15 +16,27 @@ function Site() {
         RI: boolean
     }
 
-    const backend_url = "https://ne-smash-website-server.onrender.com"
+    const backend_url = "https://smash-server-f5557f94ff97.herokuapp.com"
     const [events, setEvents] = useState<Tournament[]>([]);
     const [statestate, setStateState] = useState<StateStateInterface>({ "MA": true, "CT": false, "NH": false, "VT": false, "ME": false, "RI": false })
+    const [errorMessage, setErrorMessage] = useState("");
 
     //get upcoming tournaments from start.gg
     const getUpcomingEvents = async () => {
-        const response = await axios.get(backend_url + "/getUpcoming")
-        const data = response.data
-        setEvents(data)
+        try {
+            const response = await axios.get(backend_url + "/getUpcoming")
+            console.log("got upcoming", response);
+            const data = response.data
+            console.log(data);
+            if (!data.success) {
+                throw new Error(data.message);
+            }
+            setEvents(data.data)
+            }
+        catch (error) {
+            setEvents([]);
+            setErrorMessage("An error occurred. Message Aidan at @fluffiluff_ssb on twitter or @fluffiluff on discord to let him know something broke");
+        }
     }
 
     function getStateState(state: string): boolean{
@@ -47,6 +59,7 @@ function Site() {
         <div className="content">
             <div className="d-flex justify-content-center">
                 <div className="list-group eventListContainer">
+                    <h3>{errorMessage}</h3>
                     <h1 className="title">New England Smash Ultimate</h1>
                     <div className="featuredEventsContainer">
                         <h3>Featured Upcoming Events</h3>
